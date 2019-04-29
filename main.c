@@ -19,6 +19,7 @@ void main(void) {
   
    while(1)
   {
-       Write_String("Bigger than 8ddd");
+	   //Write_String8x2("0123456789ABCDEF") 	// For chinese display
+       Write_String("0123456789ABCDEF");
   }
 }

@@ -108,8 +108,8 @@ void Write_Char(char a)
   __delay_ms(4);
    EN  = 0;
 }
-
-void Write_String(char *a)
+// For chinese display 16x1 splitted to 2x8 columns in 1 row
+void Write_String8x2(char *a)
 {
 	int i;
 	for(i=0;a[i]!='\0';i++) {
@@ -126,6 +126,16 @@ void Write_String(char *a)
         } else {
             Write_Char(a[i]);
         }
+        
+    }
+}
+// For regular 16x1 display
+void Write_String(char *a)
+{
+	int i;
+	for(i=0;a[i]!='\0';i++) {
+
+        Write_Char(a[i]);
         
     }
 }
